@@ -1,0 +1,33 @@
+/* screen-reader preset for accessibility */
+ 
+ .header-screen-reader {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: fixed;
+  width: 1px;
+}
+
+/* beginning of my CSS */
+
+* {
+  box-sizing: border-box;
+  max-width: 2880px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+body {
+  font-family: "OpenSans-Light", serif;
+}
+
+@media screen and (min-width: 600px) {
+ 
+}
+
+@media screen and (min-width: 1000px) {
+ 
+}
