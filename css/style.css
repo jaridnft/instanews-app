@@ -18,10 +18,28 @@
   max-width: 2880px;
   font-size: 16px;
   color: #ffffff;
+  background-color: black;
 }
 
 body {
   font-family: "OpenSans-Light", serif;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.nyt-logo {
+  width: 60%;
+}
+
+select {
+  color: black;
+  background-color: white;
+  width: 6em;
 }
 
 @media screen and (min-width: 600px) {
