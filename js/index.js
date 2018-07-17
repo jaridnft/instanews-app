@@ -40,7 +40,8 @@ $(document).ready(function () {
         if (data.results[key].section === selection) {
           var storyUrl = data.results[key].url;
           // need to add on click event, change cursor style
-          $('.stories').append('<div class="story-cell"><p class="story-text">' + data.results[key].abstract + '</p></div>');
+          //  add this to div instead of anchor: onclick="location.href='#';" style="cursor: pointer;"
+          $('.stories').append('<div class="story-cell" ><a href="' + storyUrl + '"><p class="story-text">' + data.results[key].abstract + '</p></a></div>');
           if (typeof data.results[key].multimedia[4] !== 'undefined') {
             var imageUrl = data.results[key].multimedia[4].url;
             $(".stories").children(":last-child").css('background-image', 'url(' + imageUrl + ')');
