@@ -23,8 +23,8 @@ $(document).ready(function () {
       $.each(data.results, function(key, value) {
         if (data.results[key].section === selection) {
           $('.stories').append('<div class="story-cell"><p class="story-text">' + data.results[key].abstract + '</p></div>');
-          if (typeof data.results[key].multimedia[1] !== 'undefined') {
-            var imageUrl = data.results[key].multimedia[1].url;
+          if (typeof data.results[key].multimedia[4] !== 'undefined') {
+            var imageUrl = data.results[key].multimedia[4].url;
             $(".stories").children(":last-child").css('background-image', 'url(' + imageUrl + ')');
           } else {
             $(".stories").children(":last-child").remove();
