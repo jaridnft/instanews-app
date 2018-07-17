@@ -25,6 +25,10 @@ body {
   background-color: black;
 }
 
+a {
+  color: white;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -107,8 +111,8 @@ footer {
   }
 
   .story-cell {
-    width: 33.3%;
-    padding-top: 50%;
+    width: 25%;
+    padding-top: 40%;
   }
 }
 

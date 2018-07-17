@@ -38,6 +38,8 @@ $(document).ready(function () {
     }).done(function(data) {
       $.each(data.results, function(key, value) {
         if (data.results[key].section === selection) {
+          var storyUrl = data.results[key].url;
+          // need to add on click event, change cursor style
           $('.stories').append('<div class="story-cell"><p class="story-text">' + data.results[key].abstract + '</p></div>');
           if (typeof data.results[key].multimedia[4] !== 'undefined') {
             var imageUrl = data.results[key].multimedia[4].url;
@@ -46,6 +48,7 @@ $(document).ready(function () {
             $(".stories").children(":last-child").remove();
           }
         }
+
       });
       // restore margins if default selected
       if ( selection === 'default') {
@@ -54,8 +57,9 @@ $(document).ready(function () {
             $('.nyt-logo').css({"width": "22em"});
             $('.nyt-logo').css({"margin-left": "12em"});
             $('header').css({"height": "auto"}); 
-            $('header').css({"margin-top": "12em"}); 
-            $('header').css({"justify-content": "flex-start"}); 
+            $('header').css({"margin-top": "15em"}); 
+            $('header').css({"justify-content": "flex-start"});
+            $('.select-container').css({"margin-bottom": "2.5em"}); 
           } else if (window.matchMedia("(min-width: 1000px)").matches === true) {
             // TODO: desktop conditions
           } else if (window.matchMedia("(max-width: 600px)").matches === true) {
@@ -66,8 +70,8 @@ $(document).ready(function () {
           }
       } 
   
-    }).fail(function(err) {
-      throw err;
+    }).fail(function() {
+      alert('Something went wrong');
     });
   
   });
