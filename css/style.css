@@ -53,19 +53,19 @@ select {
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
-  height: 100%;
 }
 
 .story-cell {
-  position: relative;
+  width: 100%;
+  padding-top: 80%;
 }
 
 .story-text {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
   height: 5em;
+  margin-bottom: .8em;
+  padding-left: .5em;
+  line-height: 1.4em;
   background-color: rgba(0, 0, 0, 0.089)
 }
 
