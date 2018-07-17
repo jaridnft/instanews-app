@@ -25,11 +25,13 @@ body {
   background-color: black;
 }
 
-.main {
+header {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
+  margin-top: 9em;
+  margin-bottom: 5em;
 }
 
 .nyt-logo {
@@ -39,11 +41,40 @@ body {
 select {
   color: black;
   background-color: white;
-  width: 6em;
+  width: 7.7em;
+  font-weight: 600;
+  padding-left: .5em;
+  top: 1em;
+  bottom: 1em;
+}
+
+.stories {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.story-cell {
+  position: relative;
+}
+
+.story-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5em;
+  background-color: rgba(0, 0, 0, 0.089)
 }
 
 footer {
   text-align: center;
+  margin-top: 9em;
+  margin-bottom: 4em;
+  font-weight: 500;
+
 }
 
 @media screen and (min-width: 600px) {
