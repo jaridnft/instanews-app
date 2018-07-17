@@ -23,12 +23,21 @@ $(document).ready(function () {
       $.each(data.results, function(key, value) {
         if (data.results[key].section === selection) {
           $('.stories').append('<div class="story-cell"><p class="story-text">' + data.results[key].abstract + '</p></div>');
-          //$(.story-cell).css({"background-image":"url()"});
+      //    var imageUrl = data.results[key].multimedia[1].url;
+          // $(.story-cell).css('background-image', 'url(' + imageUrl + ')');
         }
-//TODO: check functionality of each selection 
-//TODO: add background images to div
-
       });
+      console.log('test');
+      console.log($('.stories').text());
+
+      // restore margins if default selected
+      if ( election === 'default') {
+          $('header').css({"margin-top":"9em"});
+          $('footer').css({"margin-top":"5em"});
+      } 
+
+//TODO: add background images to div
+  
     }).fail(function(err) {
       throw err;
     });
