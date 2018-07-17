@@ -1,13 +1,29 @@
 $(document).ready(function () {
   
   $('select').on('change', function() {
+    // check media query to change display of certain views
+    if (window.matchMedia("(min-width: 600px)").matches === true) {
+      $('.nyt-logo').css({"height": "6em"});
+      $('.nyt-logo').css({"width": "6em"});
+      $('.nyt-logo').css({"margin": "0"});
+      $('header').css({"height": "12em"}); 
+      $('header').css({"margin-top": "0"}); 
+      $('header').css({"margin-bottom": "0"}); 
+      $('header').css({"justify-content": "center"}); 
+      $('.select-container').css({"margin-top": "0"}); 
+    } else if (window.matchMedia("(min-width: 1000px)").matches === true) {
+      // TODO: desktop conditions
+    } else if (window.matchMedia("(max-width: 600px)").matches === true) {
+      // change margins when something is selected
+      $('header').css({"margin-top":"3.5em"});
+      $('footer').css({"margin-top":"2em"});
+    } else {
+      console.log('Something went wrong.');
+    }
+
     // clear old stories if changing twice
     $('.story-cell').remove();
     $('.story-text').remove();
-
-    // change margins when something is selected
-    $('header').css({"margin-top":"3.5em"});
-    $('footer').css({"margin-top":"2em"});
 
     // store selection value
     var selection = $(this).val();
@@ -33,8 +49,21 @@ $(document).ready(function () {
       });
       // restore margins if default selected
       if ( selection === 'default') {
-          $('header').css({"margin-top":"9em"});
-          $('footer').css({"margin-top":"5em"});
+          if (window.matchMedia("(min-width: 600px)").matches === true) {
+            $('.nyt-logo').css({"height": "auto"});
+            $('.nyt-logo').css({"width": "22em"});
+            $('.nyt-logo').css({"margin-left": "12em"});
+            $('header').css({"height": "auto"}); 
+            $('header').css({"margin-top": "12em"}); 
+            $('header').css({"justify-content": "flex-start"}); 
+          } else if (window.matchMedia("(min-width: 1000px)").matches === true) {
+            // TODO: desktop conditions
+          } else if (window.matchMedia("(max-width: 600px)").matches === true) {
+            $('header').css({"margin-top":"9em"});
+            $('footer').css({"margin-top":"5em"});
+          } else {
+            console.log('Something went wrong.');
+          }
       } 
   
     }).fail(function(err) {

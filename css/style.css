@@ -101,14 +101,6 @@ footer {
     margin-left: 2em;
   }
 
-  /* footer {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
-  } */
-
   .stories {
     flex-direction: row;
     flex-wrap: wrap;
@@ -116,7 +108,7 @@ footer {
 
   .story-cell {
     width: 33.3%;
-    padding-top: 33.3%;
+    padding-top: 50%;
   }
 }
 
