@@ -25,7 +25,6 @@ $(document).ready(function () {
           $('.stories').append('<div class="story-cell"><p class="story-text">' + data.results[key].abstract + '</p></div>');
           if (typeof data.results[key].multimedia[1] !== 'undefined') {
             var imageUrl = data.results[key].multimedia[1].url;
-            // this next line isn't iterating properly
             $(".stories").children(":last-child").css('background-image', 'url(' + imageUrl + ')');
           } else {
             $(".stories").children(":last-child").remove();
@@ -37,8 +36,6 @@ $(document).ready(function () {
           $('header').css({"margin-top":"9em"});
           $('footer').css({"margin-top":"5em"});
       } 
-
-//TODO: add background images to div
   
     }).fail(function(err) {
       throw err;
