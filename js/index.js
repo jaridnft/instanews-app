@@ -1,8 +1,17 @@
+// function to open in new tab
+
+function openInNewTab(url) {
+  var win = window.open(url, '_blank');
+  win.focus();
+}
+
+// main
+
 $(document).ready(function () {
-  
+
   $('select').on('change', function() {
     // check media query to change display of certain views
-    if (window.matchMedia("(min-width: 600px)").matches === true) {
+    if (window.matchMedia("(min-width: 480px)").matches === true) {
       $('.nyt-logo').css({"height": "6em"});
       $('.nyt-logo').css({"width": "6em"});
       $('.nyt-logo').css({"margin": "0"});
@@ -13,10 +22,12 @@ $(document).ready(function () {
       $('.select-container').css({"margin-top": "0"}); 
     } else if (window.matchMedia("(min-width: 1000px)").matches === true) {
       // TODO: desktop conditions
-    } else if (window.matchMedia("(max-width: 600px)").matches === true) {
+    } else if (window.matchMedia("(max-width: 480px)").matches === true) {
       // change margins when something is selected
-      $('header').css({"margin-top":"3.5em"});
+      $('header').css({"margin-top":"2em"});
       $('footer').css({"margin-top":"2em"});
+      $('.nyt-logo').css({"width": "40%"});
+      $('.nyt-logo').css({"max-width": "10em"});
     } else {
       console.log('Something went wrong.');
     }
@@ -39,9 +50,7 @@ $(document).ready(function () {
       $.each(data.results, function(key, value) {
         if (data.results[key].section === selection) {
           var storyUrl = data.results[key].url;
-          // need to add on click event, change cursor style
-          //  add this to div instead of anchor: onclick="location.href='#';" style="cursor: pointer;"
-          $('.stories').append('<div class="story-cell" ><a href="' + storyUrl + '"><p class="story-text">' + data.results[key].abstract + '</p></a></div>');
+          $('.stories').append('<div class="story-cell" onclick="openInNewTab(\'' + storyUrl + '\');" style="cursor: pointer;"><p class="story-text">' + data.results[key].abstract + '</p></div>');
           if (typeof data.results[key].multimedia[4] !== 'undefined') {
             var imageUrl = data.results[key].multimedia[4].url;
             $(".stories").children(":last-child").css('background-image', 'url(' + imageUrl + ')');
@@ -53,7 +62,7 @@ $(document).ready(function () {
       });
       // restore margins if default selected
       if ( selection === 'default') {
-          if (window.matchMedia("(min-width: 600px)").matches === true) {
+          if (window.matchMedia("(min-width: 480px)").matches === true) {
             $('.nyt-logo').css({"height": "auto"});
             $('.nyt-logo').css({"width": "22em"});
             $('.nyt-logo').css({"margin-left": "12em"});
@@ -63,9 +72,11 @@ $(document).ready(function () {
             $('.select-container').css({"margin-bottom": "2.5em"}); 
           } else if (window.matchMedia("(min-width: 1000px)").matches === true) {
             // TODO: desktop conditions
-          } else if (window.matchMedia("(max-width: 600px)").matches === true) {
-            $('header').css({"margin-top":"9em"});
-            $('footer').css({"margin-top":"5em"});
+          } else if (window.matchMedia("(max-width: 480px)").matches === true) {
+            $('header').css({"margin-top":"15em"});
+            $('footer').css({"margin-top":"10em"});
+            $('.nyt-logo').css({"width":"70%"});
+            $('.nyt-logo').css({"max-width":"14em"});
           } else {
             console.log('Something went wrong.');
           }

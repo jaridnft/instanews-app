@@ -34,13 +34,13 @@ header {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 9em;
+  margin-top: 15em;
   margin-bottom: 5em;
 }
 
 .nyt-logo {
-  width: 60%;
-  max-width: 22em;
+  width: 70%;
+  max-width: 14em;
 }
 
 select {
@@ -78,18 +78,18 @@ select {
   padding-right: .6em;
   padding-top: .5em;
   line-height: 1.4em;
-  background-color: rgba(0, 0, 0, 0.7)
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 footer {
   text-align: center;
-  margin-top: 5em;
+  margin-top: 10em;
   margin-bottom: 3em;
   font-weight: 500;
 
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 480px) {
   header {
     flex-direction: row;
     flex-wrap: wrap;
@@ -98,6 +98,7 @@ footer {
   .nyt-logo {
     margin-left: 12em;
     margin-top: 6em;
+    max-width: 22em;
   }
 
   .select-container {
@@ -111,11 +112,29 @@ footer {
   }
 
   .story-cell {
-    width: 25%;
-    padding-top: 40%;
+    width: 50%;
+    padding-top: 60%;
   }
 }
 
 @media screen and (min-width: 1000px) {
  
+}
+
+/* change fonts on tiny screen */
+
+@media screen and (max-width: 220px) {
+  * {
+    font-size: 10px;
+  }
+
+@media screen and (max-width: 135px) {
+  * {
+      font-size: 8px;
+  }
+
+@media screen and (max-width: 100px) {
+  * {
+        font-size: 6px;
+  }
 }
