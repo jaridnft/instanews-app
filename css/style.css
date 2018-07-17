@@ -16,13 +16,13 @@
 * {
   box-sizing: border-box;
   max-width: 2880px;
-  font-size: 16px;
-  color: #ffffff;
-  background-color: black;
 }
 
 body {
   font-family: "OpenSans-Light", serif;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: black;
 }
 
 .main {
@@ -40,6 +40,10 @@ select {
   color: black;
   background-color: white;
   width: 6em;
+}
+
+footer {
+  text-align: center;
 }
 
 @media screen and (min-width: 600px) {
