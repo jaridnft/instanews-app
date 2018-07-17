@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     // change margins when something is selected
     $('header').css({"margin-top":"3.5em"});
-    $('footer').css({"margin-top":"1em"});
+    $('footer').css({"margin-top":"2em"});
 
     // store selection value
     var selection = $(this).val();
@@ -23,15 +23,17 @@ $(document).ready(function () {
       $.each(data.results, function(key, value) {
         if (data.results[key].section === selection) {
           $('.stories').append('<div class="story-cell"><p class="story-text">' + data.results[key].abstract + '</p></div>');
-      //    var imageUrl = data.results[key].multimedia[1].url;
-          // $(.story-cell).css('background-image', 'url(' + imageUrl + ')');
+          if (typeof data.results[key].multimedia[1] !== 'undefined') {
+            var imageUrl = data.results[key].multimedia[1].url;
+            // this next line isn't iterating properly
+            $(".stories").children(":last-child").css('background-image', 'url(' + imageUrl + ')');
+          } else {
+            $(".stories").children(":last-child").remove();
+          }
         }
       });
-      console.log('test');
-      console.log($('.stories').text());
-
       // restore margins if default selected
-      if ( election === 'default') {
+      if ( selection === 'default') {
           $('header').css({"margin-top":"9em"});
           $('footer').css({"margin-top":"5em"});
       } 
@@ -43,5 +45,4 @@ $(document).ready(function () {
     });
   
   });
-
 });
