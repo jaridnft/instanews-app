@@ -7,8 +7,6 @@
 ehthumbs.db
 *[Tt]humbs.db
 *.Trashes
-# Ignore npm packages
-node_modules/
 #ignore example images
 instanews-desktop-initial.png
 instanews-desktop-photos.png
@@ -17,3 +15,20 @@ instanews-mobile-photos.png
 instanews-tablet-initial.png
 instanews-tablet-photos.png
 design/*
+# Ignore packages #
+# =============== #
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Ignore packages #
+# =============== #
+node_modules/
+
+# Ignore API Keys
+# apikeys
