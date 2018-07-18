@@ -15,6 +15,7 @@ instanews-mobile-photos.png
 instanews-tablet-initial.png
 instanews-tablet-photos.png
 design/*
+css/style_original.css
 # Ignore packages #
 # =============== #
 *.7z
