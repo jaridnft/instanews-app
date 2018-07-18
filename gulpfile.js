@@ -49,6 +49,7 @@ gulp.task('scripts', gulp.series("lint", function () {
 gulp.task("watch", function() {
     // pass in files that need to be uglified
     gulp.watch("js/*.js", gulp.series("scripts"));
+    gulp.watch("sass/**/*.scss",gulp.series("sass"));
 });
 
 gulp.task("browser-sync", function() {
@@ -58,7 +59,9 @@ gulp.task("browser-sync", function() {
         }
     });
     // pass in files you want to refresh on
-    gulp.watch('./').on('change', browserSync.reload);
+    gulp.watch(['./build/**/*', '*.html']).on('change', browserSync.reload);
 });
 
-gulp.task("default", gulp.parallel("browser-sync","watch"));
+gulp.task("default", gulp.series("watch"));
+//to turn on browser sync as well use:
+//gulp.task("default", gulp.parallel("browser-sync", "watch"));
