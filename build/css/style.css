@@ -350,8 +350,7 @@ body {
   font-family: "OpenSans-Light", serif;
   font-size: 16px;
   color: #ffffff;
-  background-color: black;
-  height: 100vh; }
+  background-color: black; }
 
 header {
   display: -webkit-box;
@@ -366,8 +365,10 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 15em;
-  margin-bottom: 5em; }
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 85vh; }
   header .nyt-logo {
     width: 70%;
     max-width: 14em; }
@@ -436,6 +437,8 @@ select {
 
 footer {
   text-align: center;
-  margin-top: 10em;
-  margin-bottom: 3em;
-  font-weight: 500; }
+  margin-bottom: 2em;
+  font-weight: 500;
+  position: absolute;
+  bottom: 0;
+  width: 100%; }

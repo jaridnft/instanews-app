@@ -20,7 +20,6 @@ body {
   font-size: 16px;
   color: #ffffff;
   background-color: black;
-  height: 100vh;
 }
 
 header {
@@ -28,8 +27,9 @@ header {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 15em;
-  margin-bottom: 5em;
+  justify-content: center;
+  height: 85vh;
+    // margin-bottom: 5em;
   .nyt-logo {
     width: 70%;
     max-width: 14em;
@@ -87,7 +87,9 @@ select {
 
 footer {
   text-align: center;
-  margin-top: 10em;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
   font-weight: 500;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
