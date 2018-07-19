@@ -14,7 +14,12 @@ $(document).ready(function () {
     var selectedStory = $(this).val();
 // restore margins if default selected
     if ( selectedStory === 'default') {
-        if (window.matchMedia("(min-width: 480px)").matches === true) {
+        if (window.matchMedia("(max-width: 480px)").matches === true) {
+          $('header').css({"margin-top":"15em"});
+          $('footer').css({"margin-top":"10em"});
+          $('.nyt-logo').css({"width":"70%"});
+          $('.nyt-logo').css({"max-width":"14em"});
+        } else if (window.matchMedia("(min-width: 480px)").matches === true) {
           $('.nyt-logo').css({"height": "auto"});
           $('.nyt-logo').css({"width": "22em"});
           $('.nyt-logo').css({"margin-left": "12em"});
@@ -22,13 +27,11 @@ $(document).ready(function () {
           $('header').css({"margin-top": "15em"}); 
           $('header').css({"justify-content": "flex-start"});
           $('.select-container').css({"margin-bottom": "2.5em"}); 
+// TODO: right margin when going back to default in phablet view
+        } else if (window.matchMedia("(min-width: 600px)").matches === true) {
+// TODO: tablet conditions
         } else if (window.matchMedia("(min-width: 1000px)").matches === true) {
 // TODO: desktop conditions
-        } else if (window.matchMedia("(max-width: 480px)").matches === true) {
-          $('header').css({"margin-top":"15em"});
-          $('footer').css({"margin-top":"10em"});
-          $('.nyt-logo').css({"width":"70%"});
-          $('.nyt-logo').css({"max-width":"14em"});
         } else {
           console.log('Something went wrong.');
         }
@@ -36,22 +39,25 @@ $(document).ready(function () {
 // otherwise, we'll have to get data and reconfigure the page if we're coming from default note, that this is redundant if we switch from back-to-back non-default values
     else {
 // check media queries to change display of certain views
-      if (window.matchMedia("(min-width: 480px)").matches === true) {
+      if (window.matchMedia("(max-width: 480px)").matches === true) {
+        $('header').css({"margin-top":"2em"});
+        $('header').css({"margin-bottom":"2em"});
+        $('footer').css({"margin-top":"2em"});
+        $('.nyt-logo').css({"width": "40%"});
+        $('.nyt-logo').css({"max-width": "10em"});
+      } else if (window.matchMedia("(min-width: 480px)").matches === true) {
         $('.nyt-logo').css({"height": "6em"});
         $('.nyt-logo').css({"width": "6em"});
         $('.nyt-logo').css({"margin": "0"});
         $('header').css({"height": "12em"}); 
         $('header').css({"margin-top": "0"}); 
-        $('header').css({"margin-bottom": "0"}); 
+        $('header').css({"margin-bottom": "1.5em"}); 
         $('header').css({"justify-content": "center"}); 
-        $('.select-container').css({"margin-top": "0"}); 
+        $('.select-container').css({"margin-top": "0"});
+      } else if (window.matchMedia("(max-width: 600px)").matches === true) {
+// TODO: tablet conditions
       } else if (window.matchMedia("(min-width: 1000px)").matches === true) {
 // TODO: desktop conditions
-      } else if (window.matchMedia("(max-width: 480px)").matches === true) {
-        $('header').css({"margin-top":"2em"});
-        $('footer').css({"margin-top":"2em"});
-        $('.nyt-logo').css({"width": "40%"});
-        $('.nyt-logo').css({"max-width": "10em"});
       } else {
         console.log('Something went wrong.');
       }
