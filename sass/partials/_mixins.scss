@@ -1,0 +1,42 @@
+$desktop-width: 1000px;
+$tablet-width: 600px;
+$phablet-width: 480px;
+$small-width: 220px;
+$micro-width: 135px;
+$nano-width: 100px;
+
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin phablet {
+  @media (min-width: $phablet-width) {
+    @content;
+  }
+}
+
+@mixin small-screen {
+  @media (max-width: $small-width) {
+    @content;
+  }
+}
+
+@mixin micro-screen {
+  @media (max-width: $micro-width) {
+    @content;
+  }
+}
+
+@mixin nano-screen {
+  @media (max-width: $nano-width) {
+    @content;
+  }
+}
