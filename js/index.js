@@ -38,7 +38,7 @@ $(document).ready(function () {
 // check media queries to change display of certain views,
 // then fetch data
       if (window.matchMedia("(max-width: 480px)").matches === true) {
-        $('header').css({"height":"36vh"});
+        $('header').css({"height":"38vh"});
         $('.nyt-logo').css({"width": "40%"});
         $('.nyt-logo').css({"height": "40%"});
         $('.nyt-logo').css({"max-width": "10em"});
