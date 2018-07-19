@@ -88,7 +88,6 @@ $(document).ready(function () {
 // set the background image of the new story
             var imageUrl = data.results[key].multimedia[4].url;
             $(".stories").children(":last-child").css('background-image', 'url(' + imageUrl + ')');
-// if there isn't a photo, remove the div
           }
         });
       }).fail(function() {
