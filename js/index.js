@@ -17,7 +17,9 @@ $(document).ready(function () {
         if (window.matchMedia("(max-width: 480px)").matches === true) {
           $('header').css({"height": "85vh"});
           $('.nyt-logo').css({"width":"70%"});
+          $('.nyt-logo').css({"height":"70%"});
           $('.nyt-logo').css({"max-width":"14em"});
+          $('.nyt-logo').css({"max-height":"14em"});
         } else if (window.matchMedia("(min-width: 480px)").matches === true) {
           $('.nyt-logo').css({"width":"220px"});
           $('.nyt-logo').css({"height":"220px"});
@@ -38,12 +40,14 @@ $(document).ready(function () {
       if (window.matchMedia("(max-width: 480px)").matches === true) {
         $('header').css({"height":"36vh"});
         $('.nyt-logo').css({"width": "40%"});
+        $('.nyt-logo').css({"height": "40%"});
         $('.nyt-logo').css({"max-width": "10em"});
+        $('.nyt-logo').css({"max-height": "10em"});
       } else if (window.matchMedia("(min-width: 480px)").matches === true) {
         $('.nyt-logo').css({"height": "150px"});
         $('.nyt-logo').css({"width": "150px"});
         $('.nyt-logo').css({"max-width": "150px"});
-        $('header').css({"height": "36vh"});  
+        $('header').css({"height": "33vh"});  
       } else if (window.matchMedia("(max-width: 600px)").matches === true) {
 // TODO: tablet conditions
       } else if (window.matchMedia("(min-width: 1000px)").matches === true) {

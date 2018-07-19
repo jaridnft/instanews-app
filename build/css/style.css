@@ -374,13 +374,15 @@ header {
   header .nyt-logo {
     width: 70%;
     max-width: 14em;
+    max-height: 14em;
     -webkit-transition: all 1s ease-out 0.3s;
     transition: all 1s ease-out 0.3s; }
     @media (min-width: 480px) {
       header .nyt-logo {
         width: 220px;
         height: 220px;
-        max-width: 220px; } }
+        max-width: 220px;
+        max-height: 220px; } }
   @media (min-width: 600px) {
     header {
       -webkit-box-orient: horizontal;

@@ -33,11 +33,13 @@ header {
   .nyt-logo {
     width: 70%;
     max-width: 14em;
+    max-height: 14em;
     @include transition();
     @include phablet {
       width: 220px;
       height: 220px;
       max-width: 220px;
+      max-height: 220px;
     }
   }
   @include tablet {
