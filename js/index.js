@@ -1,4 +1,4 @@
-// function to open in new tab
+// function to open a url in new tab
 function openInNewTab(url) {
   var win = window.open(url, '_blank');
   win.focus();
@@ -20,14 +20,11 @@ $(document).ready(function () {
           $('.nyt-logo').css({"width":"70%"});
           $('.nyt-logo').css({"max-width":"14em"});
         } else if (window.matchMedia("(min-width: 480px)").matches === true) {
-          $('.nyt-logo').css({"height": "auto"});
-          $('.nyt-logo').css({"width": "22em"});
-          $('.nyt-logo').css({"margin-left": "12em"});
-          $('header').css({"height": "auto"}); 
+          $('.nyt-logo').css({"width":"220px"});
+          $('.nyt-logo').css({"height":"220px"});
+          $('.nyt-logo').css({"max-width":"220px"});
           $('header').css({"margin-top": "15em"}); 
-          $('header').css({"justify-content": "flex-start"});
-          $('.select-container').css({"margin-bottom": "2.5em"}); 
-// TODO: right margin when going back to default in phablet view
+          $('header').css({"margin-bottom": "5em"}); 
         } else if (window.matchMedia("(min-width: 600px)").matches === true) {
 // TODO: tablet conditions
         } else if (window.matchMedia("(min-width: 1000px)").matches === true) {
@@ -49,13 +46,9 @@ $(document).ready(function () {
       } else if (window.matchMedia("(min-width: 480px)").matches === true) {
         $('.nyt-logo').css({"height": "6em"});
         $('.nyt-logo').css({"width": "6em"});
-        $('.nyt-logo').css({"margin": "0"});
         $('.nyt-logo').css({"max-width": "150px"});
-        $('header').css({"height": "12em"}); 
-        $('header').css({"margin-top": "0"}); 
+        $('header').css({"margin-top": "1.5em"}); 
         $('header').css({"margin-bottom": "1.5em"}); 
-        $('header').css({"justify-content": "center"}); 
-        $('.select-container').css({"margin-top": "0"});
       } else if (window.matchMedia("(max-width: 600px)").matches === true) {
 // TODO: tablet conditions
       } else if (window.matchMedia("(min-width: 1000px)").matches === true) {
@@ -92,7 +85,7 @@ $(document).ready(function () {
         });
       }).fail(function() {
       alert('Something went wrong');
-    });
+      });
     }  
   });
 });

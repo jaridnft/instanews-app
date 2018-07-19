@@ -1,9 +1,6 @@
 $desktop-width: 1000px;
 $tablet-width: 600px;
 $phablet-width: 480px;
-$small-width: 220px;
-$micro-width: 135px;
-$nano-width: 100px;
 
 @mixin desktop {
   @media (min-width: $desktop-width) {
@@ -35,4 +32,15 @@ $nano-width: 100px;
   margin-bottom: $bottom;
   margin-right: $right;
   margin-left: $left;
+}
+
+@mixin header-screen-reader() {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: fixed;
+  width: 1px;
 }

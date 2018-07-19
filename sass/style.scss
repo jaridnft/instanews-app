@@ -5,18 +5,9 @@
 
 /* screen-reader preset for accessibility */
  
- .header-screen-reader {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: fixed;
-  width: 1px;
+.header-screen-reader {
+  @include header-screen-reader();
 }
-
-/* beginning of my CSS */
 
 * {
   box-sizing: border-box;
@@ -29,6 +20,7 @@ body {
   font-size: 16px;
   color: #ffffff;
   background-color: black;
+  height: 100vh;
 }
 
 header {
@@ -41,6 +33,10 @@ header {
   .nyt-logo {
     width: 70%;
     max-width: 14em;
+    @include phablet {
+      width: 220px;
+      max-width: 220px;
+    }
   }
   @include tablet {
     flex-direction: row;
@@ -56,12 +52,6 @@ select {
   padding-left: .5em;
   top: 1em;
   bottom: 1em;
-  .select-container & {
-    @include tablet {
-      margin-top: 4em;
-      margin-left: 2em;
-    }
-  }
 }
 
 .stories {
