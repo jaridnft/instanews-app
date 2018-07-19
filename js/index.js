@@ -62,21 +62,25 @@ $(document).ready(function () {
         method: 'GET',
       }).done(function(data) {
 // iterate over each 'results' object
+        var count = 0;
         $.each(data.results, function(key, value) {
           var storyUrl = data.results[key].url;
-// check to see if the story has an image
+  // check to see if the story has an image
           if (typeof data.results[key].multimedia[4] !== 'undefined') {
-// if it does, we'll create the story 
-            $('.stories')
-            .append('<div class="story-cell" onclick="openInNewTab(\''
-            + storyUrl 
-            + '\');" style="cursor: pointer;"><p class="story-text">' 
-            + data.results[key].abstract 
-            + '</p></div>');
-// set the background image of the new story
-            var imageUrl = data.results[key].multimedia[4].url;
-            $(".stories").children(":last-child").css('background-image', 'url(' + imageUrl + ')');
-          }
+  // only print the first 12 stories with pictures
+            count += 1;
+            if (count < 13) {
+              $('.stories')
+              .append('<div class="story-cell" onclick="openInNewTab(\''
+              + storyUrl 
+              + '\');" style="cursor: pointer;"><p class="story-text">' 
+              + data.results[key].abstract 
+              + '</p></div>');
+  // set the background image of the new story
+              var imageUrl = data.results[key].multimedia[4].url;
+              $(".stories").children(":last-child").css('background-image', 'url(' + imageUrl + ')');
+            }
+          } 
         });
       }).fail(function() {
       alert('Something went wrong');
