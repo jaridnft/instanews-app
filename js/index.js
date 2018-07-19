@@ -94,13 +94,11 @@ $(document).ready(function () {
         // show loading gif only while ajax request is in process
         beforeSend: function(){
           $(".loader").show();
-          $("header").hide();
           $(".stories").hide();
           $("footer").hide();
          },
         complete:function(data){
           $(".loader").hide();
-          $("header").show();
           $(".stories").show();
           $("footer").show();
         }

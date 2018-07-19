@@ -23,13 +23,19 @@ body {
 }
 
 .loader {
-  height: 100vh;
+  height: 50vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  @include tablet {
+    height: 65vh;
+  }
+  @include desktop {
+    height: 75vh;
+  }
   img {
-    width: 10%;
+    width: 1%;
   }
 }
 
