@@ -368,7 +368,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 85vh; }
+  height: 90vh; }
   header .nyt-logo {
     width: 70%;
     max-width: 14em; }
@@ -439,6 +439,4 @@ footer {
   text-align: center;
   margin-bottom: 2em;
   font-weight: 500;
-  position: absolute;
-  bottom: 0;
   width: 100%; }

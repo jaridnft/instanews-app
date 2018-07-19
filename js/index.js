@@ -15,8 +15,7 @@ $(document).ready(function () {
 // restore margins if default selected
     if ( selectedStory === 'default') {
         if (window.matchMedia("(max-width: 480px)").matches === true) {
-          $('header').css({"margin-top":"15em"});
-          $('footer').css({"margin-top":"10em"});
+          $('header').css({"height": "85vh"});
           $('.nyt-logo').css({"width":"70%"});
           $('.nyt-logo').css({"max-width":"14em"});
         } else if (window.matchMedia("(min-width: 480px)").matches === true) {
@@ -37,9 +36,7 @@ $(document).ready(function () {
 // check media queries to change display of certain views,
 // then fetch data
       if (window.matchMedia("(max-width: 480px)").matches === true) {
-        $('header').css({"margin-top":"2em"});
-        $('header').css({"margin-bottom":"2em"});
-        $('footer').css({"margin-top":"2em"});
+        $('header').css({"height":"40vh"});
         $('.nyt-logo').css({"width": "40%"});
         $('.nyt-logo').css({"max-width": "10em"});
       } else if (window.matchMedia("(min-width: 480px)").matches === true) {
