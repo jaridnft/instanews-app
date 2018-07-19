@@ -23,20 +23,16 @@ $nano-width: 100px;
   }
 }
 
-@mixin small-screen {
-  @media (max-width: $small-width) {
-    @content;
-  }
+@mixin padding($top, $bottom, $right, $left) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+  padding-right: $right;
+  padding-left: $left;
 }
 
-@mixin micro-screen {
-  @media (max-width: $micro-width) {
-    @content;
-  }
-}
-
-@mixin nano-screen {
-  @media (max-width: $nano-width) {
-    @content;
-  }
+@mixin margin($top, $bottom, $right, $left) {
+  margin-top: $top;
+  margin-bottom: $bottom;
+  margin-right: $right;
+  margin-left: $left;
 }

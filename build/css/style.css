@@ -344,16 +344,8 @@ template {
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  max-width: 2880px; }
-  @media (max-width: 220px) {
-    * {
-      font-size: 10px; } }
-  @media (max-width: 135px) {
-    * {
-      font-size: 8px; } }
-  @media (max-width: 100px) {
-    * {
-      font-size: 6px; } }
+  max-width: 2880px;
+  min-width: 128px; }
 
 body {
   font-family: "OpenSans-Light", serif;
@@ -422,23 +414,23 @@ select {
           flex-wrap: wrap; } }
   .stories .story-cell {
     width: 100%;
-    padding-top: 100%;
+    height: 420px;
     background-size: cover;
+    background-position: 50% 50%;
     position: relative; }
     @media (min-width: 480px) {
       .stories .story-cell {
-        width: 50%;
-        padding-top: 60%; } }
+        width: 50%; } }
     .stories .story-cell .story-text {
       width: 100%;
       position: absolute;
       bottom: 0;
       margin-top: 0;
       margin-bottom: 0;
-      padding-bottom: .6em;
-      padding-left: .5em;
-      padding-right: .6em;
-      padding-top: .5em;
+      padding-top: 0.5em;
+      padding-bottom: 0.6em;
+      padding-right: 0.6em;
+      padding-left: 0.5em;
       line-height: 1.4em;
       background-color: rgba(0, 0, 0, 0.7); }
 
