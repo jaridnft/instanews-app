@@ -36,9 +36,10 @@ $(document).ready(function () {
           console.log('Something went wrong.');
         }
     } 
-// otherwise, we'll have to get data and reconfigure the page if we're coming from default note, that this is redundant if we switch from back-to-back non-default values
     else {
-// check media queries to change display of certain views
+// if we didn't select default, we'll continue to 
+// check media queries to change display of certain views,
+// then fetch data
       if (window.matchMedia("(max-width: 480px)").matches === true) {
         $('header').css({"margin-top":"2em"});
         $('header').css({"margin-bottom":"2em"});
@@ -49,6 +50,7 @@ $(document).ready(function () {
         $('.nyt-logo').css({"height": "6em"});
         $('.nyt-logo').css({"width": "6em"});
         $('.nyt-logo').css({"margin": "0"});
+        $('.nyt-logo').css({"max-width": "150px"});
         $('header').css({"height": "12em"}); 
         $('header').css({"margin-top": "0"}); 
         $('header').css({"margin-bottom": "1.5em"}); 
@@ -74,20 +76,19 @@ $(document).ready(function () {
 // iterate over each 'results' object
         $.each(data.results, function(key, value) {
           var storyUrl = data.results[key].url;
-// append div for each relevant story
-          $('.stories')
-          .append('<div class="story-cell" onclick="openInNewTab(\''
-           + storyUrl 
-           + '\');" style="cursor: pointer;"><p class="story-text">' 
-           + data.results[key].abstract 
-           + '</p></div>');
-// if there is a photo, set the background image of the div
+// check to see if the story has an image
           if (typeof data.results[key].multimedia[4] !== 'undefined') {
+// if it does, we'll create the story 
+            $('.stories')
+            .append('<div class="story-cell" onclick="openInNewTab(\''
+            + storyUrl 
+            + '\');" style="cursor: pointer;"><p class="story-text">' 
+            + data.results[key].abstract 
+            + '</p></div>');
+// set the background image of the new story
             var imageUrl = data.results[key].multimedia[4].url;
             $(".stories").children(":last-child").css('background-image', 'url(' + imageUrl + ')');
 // if there isn't a photo, remove the div
-          } else {
-            $(".stories").children(":last-child").remove();
           }
         });
       }).fail(function() {
