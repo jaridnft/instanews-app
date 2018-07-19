@@ -36,14 +36,14 @@ $(document).ready(function () {
 // check media queries to change display of certain views,
 // then fetch data
       if (window.matchMedia("(max-width: 480px)").matches === true) {
-        $('header').css({"height":"40vh"});
+        $('header').css({"height":"36vh"});
         $('.nyt-logo').css({"width": "40%"});
         $('.nyt-logo').css({"max-width": "10em"});
       } else if (window.matchMedia("(min-width: 480px)").matches === true) {
-        $('.nyt-logo').css({"height": "6em"});
-        $('.nyt-logo').css({"width": "6em"});
+        $('.nyt-logo').css({"height": "150px"});
+        $('.nyt-logo').css({"width": "150px"});
         $('.nyt-logo').css({"max-width": "150px"});
-        $('header').css({"height": "25vh"});  
+        $('header').css({"height": "36vh"});  
       } else if (window.matchMedia("(max-width: 600px)").matches === true) {
 // TODO: tablet conditions
       } else if (window.matchMedia("(min-width: 1000px)").matches === true) {

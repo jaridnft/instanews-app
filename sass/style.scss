@@ -29,12 +29,14 @@ header {
   align-items: center;
   justify-content: center;
   height: 90vh;
-    // margin-bottom: 5em;
+  @include transition();
   .nyt-logo {
     width: 70%;
     max-width: 14em;
+    @include transition();
     @include phablet {
       width: 220px;
+      height: 220px;
       max-width: 220px;
     }
   }

@@ -44,3 +44,7 @@ $phablet-width: 480px;
   position: fixed;
   width: 1px;
 }
+
+@mixin transition () {
+  transition: all 1s ease-out 0.3s;
+}
