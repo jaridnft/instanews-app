@@ -389,6 +389,11 @@ header {
         height: 35%;
         max-width: 220px;
         max-height: 220px; } }
+    @media (min-width: 1000px) {
+      header .nyt-logo {
+        margin-left: 2em;
+        width: 220px;
+        height: 220px; } }
   @media (min-width: 600px) {
     header {
       -webkit-box-orient: horizontal;
@@ -397,6 +402,11 @@ header {
               flex-direction: row;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; } }
+  @media (min-width: 1000px) {
+    header {
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; } }
 
 select {
   color: black;
@@ -443,6 +453,9 @@ select {
     @media (min-width: 480px) {
       .stories .story-cell {
         width: 50%; } }
+    @media (min-width: 1000px) {
+      .stories .story-cell {
+        width: 25%; } }
     .stories .story-cell .story-text {
       width: 100%;
       position: absolute;

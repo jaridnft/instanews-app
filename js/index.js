@@ -4,6 +4,9 @@ function openInNewTab(url) {
   win.focus();
 }
 
+//TODO: jQuery select menu plugin
+//TODO: loading gif
+
 // main
 $(document).ready(function () {
   $('.story-text').hide();
@@ -23,7 +26,13 @@ $(document).ready(function () {
         $('.nyt-logo').css({"max-width":"14em"});
         $('.nyt-logo').css({"max-height":"14em"});
       } else if (window.matchMedia("(min-width: 1000px)").matches === true) {
-        // TODO: desktop conditions
+        $('.nyt-logo').css({"width": "23.5%"});
+        $('.nyt-logo').css({"height": "35%"});
+        $('.nyt-logo').css({"max-width": "220px"});
+        $('.nyt-logo').css({"max-height": "220px"});
+        $('.nyt-logo').css({"margin-left": "2em"});
+        $('header').css({"height": "90vh"});
+        $('header').css({"width": "100%"});
       } else if (window.matchMedia("(min-width: 600px)").matches === true) {
         $('.nyt-logo').css({"width": "23.5%"});
         $('.nyt-logo').css({"height": "35%"});
@@ -51,7 +60,13 @@ $(document).ready(function () {
         $('.nyt-logo').css({"max-width": "10em"});
         $('.nyt-logo').css({"max-height": "10em"});
       } else if (window.matchMedia("(min-width: 1000px)").matches === true) {
-        // TODO: desktop conditions
+        $('.nyt-logo').css({"width": "67px"});
+        $('.nyt-logo').css({"height": "67px"});
+        $('.nyt-logo').css({"max-width": "67px"});
+        $('.nyt-logo').css({"max-height": "67px"});
+        $('.nyt-logo').css({"margin-left": "0"});
+        $('header').css({"height": "15vh"});
+        $('header').css({"width": "600px"});
       } else if (window.matchMedia("(min-width: 600px)").matches === true) {
         $('.nyt-logo').css({"width": "67px"});
         $('.nyt-logo').css({"height": "67px"});
