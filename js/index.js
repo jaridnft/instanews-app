@@ -4,6 +4,13 @@ function openInNewTab(url) {
   win.focus();
 }
 
+// selectric settings
+$(function() {
+  $('select').selectric({
+    
+  });
+});
+
 //TODO: jQuery select menu plugin
 //TODO: loading gif
 
