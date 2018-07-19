@@ -117,9 +117,9 @@ $(document).ready(function () {
         $('.story-text').hide();
         $('.story-cell').hover(function(){
           var index = $(this).index();
-          $(this).children().show('slow');
+          $(this).children().show(500);
         }, function() {
-          $(this).children().hide('slow');
+          $(this).children().hide(500);
         });
       }).fail(function() {
         alert('Something went wrong');
