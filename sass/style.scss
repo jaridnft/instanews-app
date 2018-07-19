@@ -41,6 +41,12 @@ header {
       max-width: 220px;
       max-height: 220px;
     }
+    @include tablet {
+      width: 23.5%;
+      height: 35%;
+      max-width: 220px;
+      max-height: 220px;
+    }
   }
   @include tablet {
     flex-direction: row;
@@ -56,6 +62,15 @@ select {
   padding-left: .5em;
   top: 1em;
   bottom: 1em;
+  @include tablet {
+    width: 12em;
+  }
+}
+
+.select-container {
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 2em;
 }
 
 .stories {
@@ -82,7 +97,6 @@ select {
       bottom: 0;
       margin-top: 0;
       margin-bottom: 0;
-      @include transition;
       @include padding(.5em, .6em, .6em, .5em);
       line-height: 1.4em;
       background-color: rgba(0, 0, 0, 0.7);

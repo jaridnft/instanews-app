@@ -22,15 +22,20 @@ $(document).ready(function () {
         $('.nyt-logo').css({"height":"70%"});
         $('.nyt-logo').css({"max-width":"14em"});
         $('.nyt-logo').css({"max-height":"14em"});
+      } else if (window.matchMedia("(min-width: 1000px)").matches === true) {
+        // TODO: desktop conditions
+      } else if (window.matchMedia("(min-width: 600px)").matches === true) {
+        $('.nyt-logo').css({"width": "23.5%"});
+        $('.nyt-logo').css({"height": "35%"});
+        $('.nyt-logo').css({"max-width": "220px"});
+        $('.nyt-logo').css({"max-height": "220px"});
+        $('header').css({"height": "90vh"});
+        $('header').css({"width": "100%"});
       } else if (window.matchMedia("(min-width: 480px)").matches === true) {
         $('.nyt-logo').css({"width":"220px"});
         $('.nyt-logo').css({"height":"220px"});
         $('.nyt-logo').css({"max-width":"220px"});
         $('header').css({"height": "85vh"}); 
-      } else if (window.matchMedia("(min-width: 600px)").matches === true) {
-        // TODO: tablet conditions
-      } else if (window.matchMedia("(min-width: 1000px)").matches === true) {
-        // TODO: desktop conditions
       } else {
         console.log('Something went wrong.');
       }
@@ -45,15 +50,20 @@ $(document).ready(function () {
         $('.nyt-logo').css({"height": "40%"});
         $('.nyt-logo').css({"max-width": "10em"});
         $('.nyt-logo').css({"max-height": "10em"});
+      } else if (window.matchMedia("(min-width: 1000px)").matches === true) {
+        // TODO: desktop conditions
+      } else if (window.matchMedia("(min-width: 600px)").matches === true) {
+        $('.nyt-logo').css({"width": "67px"});
+        $('.nyt-logo').css({"height": "67px"});
+        $('.nyt-logo').css({"max-width": "67px"});
+        $('.nyt-logo').css({"max-height": "67px"});
+        $('header').css({"height": "15vh"});
+        $('header').css({"width": "600px"});
       } else if (window.matchMedia("(min-width: 480px)").matches === true) {
         $('.nyt-logo').css({"height": "150px"});
         $('.nyt-logo').css({"width": "150px"});
         $('.nyt-logo').css({"max-width": "150px"});
         $('header').css({"height": "33vh"});  
-      } else if (window.matchMedia("(max-width: 600px)").matches === true) {
-        // TODO: tablet conditions
-      } else if (window.matchMedia("(min-width: 1000px)").matches === true) {
-        // TODO: desktop conditions
       } else {
         console.log('Something went wrong.');
       }
@@ -89,13 +99,12 @@ $(document).ready(function () {
           } 
         });
         // display abstract when you hover
-//TODO: only show one paragraph at a time
         $('.story-text').hide();
         $('.story-cell').hover(function(){
           var index = $(this).index();
-          $(this).children().show();
+          $(this).children().show('slow');
         }, function() {
-          $(this).children().hide();
+          $(this).children().hide('slow');
         });
       }).fail(function() {
         alert('Something went wrong');
