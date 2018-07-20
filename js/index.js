@@ -5,14 +5,11 @@ function openInNewTab(url) {
 }
 
 // selectric settings
-$(function() {
-  $('select').selectric({
-    
-  });
-});
-
-//TODO: jQuery select menu plugin
-//TODO: loading gif
+// $(function() {
+//   $('select').selectric({
+// //TODO: style selectric
+//   });
+// });
 
 // main
 $(document).ready(function () {
@@ -140,7 +137,7 @@ $(document).ready(function () {
           $(this).children().hide(500);
         });
       }).fail(function() {
-        alert('Something went wrong');
+        alert('Something went wrong, please refresh.');
       });
     }  
   });
