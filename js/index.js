@@ -5,9 +5,10 @@ function openInNewTab(url) {
 }
 
 // selectric settings
+// opted to not do this, it mucked up all my margins and I didn't see the time ROI
+
 // $(function() {
 //   $('select').selectric({
-// //TODO: style selectric
 //   });
 // });
 
