@@ -114,6 +114,7 @@ $(document).ready(function () {
           // check to see if the story has an image
           if (typeof data.results[key].multimedia[4] !== 'undefined') {
             // only print the first 12 stories with pictures
+            // this logic is better than data.results.slice() IMO as we don't know how many results are lacking pictures, I'd rather ensure I get 12 results no matter what... even if it results in extra loops
             count += 1;
             if (count < 13) {
               $('.stories')
