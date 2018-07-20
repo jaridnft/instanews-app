@@ -4,6 +4,9 @@ function openInNewTab(url) {
   win.focus();
 }
 
+// main
+$(document).ready(function () {
+  
 // selectric settings
 // opted to not do this, it mucked up all my margins and I didn't see the time ROI
 
@@ -12,8 +15,6 @@ function openInNewTab(url) {
 //   });
 // });
 
-// main
-$(document).ready(function () {
   $('.story-text').hide();
   // execute the following code when select menu is changed
   $('select').on('change', function() {
