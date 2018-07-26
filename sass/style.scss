@@ -80,13 +80,15 @@ header {
 }
 
 select {
-  color: black;
-  background-color: white;
+  border: 1px solid #fff;
+  color: white;
+  background-color: #2c3e50;
   width: 7.7em;
   font-weight: 600;
   padding-left: .5em;
   top: 1em;
   bottom: 1em;
+
   @include tablet {
     width: 12em;
   }
