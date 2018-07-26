@@ -6,19 +6,11 @@ function openInNewTab(url) {
 
 // main
 $(document).ready(function () {
-  
-// selectric settings
-// opted to not do this, it mucked up all my margins and I didn't see the time ROI
-
-// $(function() {
-//   $('select').selectric({
-//   });
-// });
 
   $('.story-text').hide();
   // execute the following code when select menu is changed
   $('select').on('change', function() {
-    // clear old stories 
+    // clear old stories
     $('.story-cell').remove();
     $('.story-text').remove();
     // store selected value
@@ -50,13 +42,13 @@ $(document).ready(function () {
         $('.nyt-logo').css({"width":"220px"});
         $('.nyt-logo').css({"height":"220px"});
         $('.nyt-logo').css({"max-width":"220px"});
-        $('header').css({"height": "85vh"}); 
+        $('header').css({"height": "85vh"});
       } else {
         console.log('Something went wrong.');
       }
-    } 
+    }
     else {
-      // if we didn't select default, we'll continue to 
+      // if we didn't select default, we'll continue to
       // check media queries to change display of certain views,
       // then fetch data
       if (window.matchMedia("(max-width: 480px)").matches === true) {
@@ -84,7 +76,7 @@ $(document).ready(function () {
         $('.nyt-logo').css({"height": "150px"});
         $('.nyt-logo').css({"width": "150px"});
         $('.nyt-logo').css({"max-width": "150px"});
-        $('header').css({"height": "33vh"});  
+        $('header').css({"height": "33vh"});
       } else {
         console.log('Something went wrong.');
       }
@@ -121,15 +113,15 @@ $(document).ready(function () {
             if (count < 13) {
               $('.stories')
               .append('<div class="story-cell" onclick="openInNewTab(\''
-              + storyUrl 
-              + '\');" style="cursor: pointer;"><p class="story-text">' 
-              + data.results[key].abstract 
+              + storyUrl
+              + '\');" style="cursor: pointer;"><p class="story-text">'
+              + data.results[key].abstract
               + '</p></div>');
               // set the background image of the new story
               var imageUrl = data.results[key].multimedia[4].url;
               $(".stories").children(":last-child").css('background-image', 'url(' + imageUrl + ')');
             }
-          } 
+          }
         });
         // display abstract when you hover
         $('.story-text').hide();
@@ -142,6 +134,6 @@ $(document).ready(function () {
       }).fail(function() {
         alert('Something went wrong, please refresh.');
       });
-    }  
+    }
   });
 });
