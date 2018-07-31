@@ -4,11 +4,20 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     eslint = require('gulp-eslint'),
     sass = require('gulp-sass'),
+    babel = require('gulp-babel'),
     autoprefixer = require('gulp-autoprefixer'),
     cssnano = require('gulp-cssnano'),
     prettyError = require("gulp-prettyerror");
 
-gulp.task("sass", function() {
+gulp.task("babel", () => {
+  return ( gulp
+    .src('./js/index.js')
+    .pipe(babel())
+    .pipe(gulp.dest('./build/js/'))
+  );
+});
+
+gulp.task("sass", () => {
   return gulp
     .src("./sass/style.scss")
     .pipe(prettyError())
@@ -24,7 +33,7 @@ gulp.task("sass", function() {
     .pipe(gulp.dest("./build/css"));
 });
 
-gulp.task("lint", function () {
+gulp.task("lint", () => {
     return gulp
             .src('js/*.js')
                 // eslint() attaches the lint output to the "eslint" property
@@ -38,7 +47,7 @@ gulp.task("lint", function () {
             .pipe(eslint.failAfterError());
 });
 
-gulp.task('scripts', gulp.series("lint", function () {
+gulp.task('scripts', gulp.series("lint", () => {
     return gulp
       .src("./js/*.js") // these are the files gulp will consume
       .pipe( uglify() ) // call uglify function on these files
@@ -46,13 +55,13 @@ gulp.task('scripts', gulp.series("lint", function () {
       .pipe( gulp.dest("./build/js") ); // send built files to ./build/js/
 }));
 
-gulp.task("watch", function() {
+gulp.task("watch", () => {
     // pass in files that need to be uglified
     gulp.watch("js/*.js", gulp.series("scripts"));
     gulp.watch("sass/**/*.scss",gulp.series("sass"));
 });
 
-gulp.task("browser-sync", function() {
+gulp.task("browser-sync", () => {
     browserSync.init({
         server: {
             baseDir: "./"
