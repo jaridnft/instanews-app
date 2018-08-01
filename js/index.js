@@ -1,6 +1,6 @@
 // function to open a url in new tab
 function openInNewTab(url) {
-  var win = window.open(url, '_blank');
+  let win = window.open(url, '_blank');
   win.focus();
 }
 
@@ -14,7 +14,7 @@ $(document).ready(function () {
     $('.story-cell').remove();
     $('.story-text').remove();
     // store selected value
-    var selectedStory = $(this).val();
+    let selectedStory = $(this).val();
     // restore margins if default selected
     if ( selectedStory === 'default') {
       if (window.matchMedia("(max-width: 480px)").matches === true) {
@@ -81,7 +81,7 @@ $(document).ready(function () {
         console.log('Something went wrong.');
       }
       // get correct API url for the selected story type
-      var url = "https://api.nytimes.com/svc/topstories/v2/" + selectedStory + ".json";
+      let url = "https://api.nytimes.com/svc/topstories/v2/" + selectedStory + ".json";
       url += '?' + $.param({
         'api-key': "eb429d0d01c04f9a8c944a8366666c40"
       });
@@ -100,11 +100,11 @@ $(document).ready(function () {
           $(".stories").show();
           $("footer").show();
         }
-      }).done(function(data) {
+      }).done(data => {
         // iterate over each 'results' object
-        var count = 0;
+        let count = 0;
         $.each(data.results, function(key, value) {
-          var storyUrl = data.results[key].url;
+          let storyUrl = data.results[key].url;
           // check to see if the story has an image
           if (typeof data.results[key].multimedia[4] !== 'undefined') {
             // only print the first 12 stories with pictures
@@ -112,28 +112,23 @@ $(document).ready(function () {
             count += 1;
             if (count < 13) {
               $('.stories')
-              .append('<div class="story-cell" onclick="openInNewTab(\''
-              + storyUrl
-              + '\');" style="cursor: pointer;"><p class="story-text">'
-              + data.results[key].abstract
-              + '</p></div>');
+              .append(`<div class='story-cell' onclick="openInNewTab('${storyUrl}');"
+                       style='cursor: pointer;'><p class='story-text'>${data.results[key].abstract}</p></div>`);
               // set the background image of the new story
-              var imageUrl = data.results[key].multimedia[4].url;
+              let imageUrl = data.results[key].multimedia[4].url;
               $(".stories").children(":last-child").css('background-image', 'url(' + imageUrl + ')');
             }
           }
         });
         // display abstract when you hover
         $('.story-text').hide();
-        $('.story-cell').hover(function(){
-          var index = $(this).index();
+        $('.story-cell').hover(function () {
+          let index = $(this).index();
           $(this).children().show(500);
         }, function() {
           $(this).children().hide(500);
         });
-      }).fail(function() {
-        alert('Something went wrong, please refresh.');
-      });
+      }).fail(() => alert('Something went wrong, please refresh.'));
     }
   });
 });

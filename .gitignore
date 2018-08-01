@@ -16,6 +16,7 @@ instanews-tablet-initial.png
 instanews-tablet-photos.png
 design/*
 sass/style_original.css
+package-lock.json
 # Ignore packages #
 # =============== #
 *.7z
