@@ -30,4 +30,13 @@
      .children(":last-child")
      .css("background-image",`url("${data.results[key].multimedia[4].url}")`);
 ```
+## Installation:
+Download or clone repo, then run the following commands in terminal:
 
+`npm install` - to install gulp
+
+`gulp sass` - to convert Sass files to CSS
+
+`gulp scripts` - to call babel and uglify on JS files
+
+`gulp browser-sync` - to refresh page and watch the build folder
