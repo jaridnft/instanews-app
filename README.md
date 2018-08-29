@@ -31,7 +31,7 @@
      .children(":last-child")
      .css("background-image",`url("${data.results[key].multimedia[4].url}")`);
 ```
-## Setup:
+## Setup
 Download or clone repo, then run the following commands in terminal:
 
 **Initialize NPM:**
