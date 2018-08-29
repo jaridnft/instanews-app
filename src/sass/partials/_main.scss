@@ -1,0 +1,177 @@
+/* screen-reader preset for accessibility */
+
+.header-screen-reader {
+  @include header-screen-reader();
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 2880px;
+  min-width: 128px;
+}
+
+body {
+  font-family: "OpenSans-Light", serif;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: black;
+}
+
+.loader {
+  height: auto;
+  width: 100px;
+  display: block;
+  margin: 15vh auto;
+  @include tablet {
+    margin: 25vh auto;
+    width: 125px;
+  }
+  @include desktop {
+    margin: 35vh auto;
+    width: 150px;
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  @include transition();
+  .nyt-logo {
+    width: 70%;
+    max-width: 14em;
+    max-height: 14em;
+    @include transition();
+    @include phablet {
+      width: 220px;
+      height: 220px;
+      max-width: 220px;
+      max-height: 220px;
+    }
+    @include tablet {
+      width: 23.5%;
+      height: 35%;
+      max-width: 220px;
+      max-height: 220px;
+    }
+    @include desktop {
+      margin-left: 2em;
+      width: 220px;
+      height: 220px;
+    }
+  }
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  @include desktop {
+    justify-content: flex-start;
+  }
+}
+
+header.toggle {
+  height: 38vh;
+  @include phablet {
+    height: 33vh;
+  }
+  @include tablet {
+    height: 15vh;
+    width: 600px;
+  }
+  @include desktop {
+    height: 15vh;
+    width: 600px;
+  }
+  .nyt-logo {
+    width: 40%;
+    height: 40%;
+    max-width: 10em;
+    max-height: 10em;
+    @include phablet {
+      max-width: 150px;
+      width: 150px;
+      height: 150px;
+    }
+    @include tablet {
+      max-height: 67px;
+      max-width: 67px;
+      width: 67px;
+      height: 67px;
+    }
+    @include desktop {
+      margin-left: 0;
+      height: 67px;
+      max-height: 67px;
+      width: 67px;
+      max-width: 67px;
+    }
+  }
+}
+
+select {
+  color: black;
+  background-color: white;
+  width: 7.7em;
+  font-weight: 600;
+  padding-left: 0.5em;
+  top: 1em;
+  bottom: 1em;
+  @include tablet {
+    width: 12em;
+  }
+}
+
+.select-container {
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 2em;
+}
+
+.stories {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  @include phablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .story-cell {
+    color: white;
+    display: block;
+    height: 420px;
+    width: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+    @include phablet {
+      width: 50%;
+    }
+    @include desktop {
+      width: 25%;
+    }
+    .story-text {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      margin: 0 auto;
+      padding: 0.5em 0.6em 0.6em 0.5em;
+      line-height: 1.4em;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 2em;
+  font-weight: 500;
+  width: 100%;
+  color: rgb(136, 136, 136);
+  .instanews {
+    text-transform: uppercase;
+  }
+}

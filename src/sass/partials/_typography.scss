@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'OpenSans-Light';
+    src: url('../../assets/fonts/OpenSans-Light.eot');
+    src: url('../../assets/fonts/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/fonts/OpenSans-Light.woff2') format('woff2'),
+        url('../../assets/fonts/OpenSans-Light.ttf') format('truetype'),
+        url('../../assets/fonts/OpenSans-Light.svg#OpenSans-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans-BoldItalic';
+    src: url('../../assets/fonts/OpenSans-BoldItalic.eot');
+    src: url('../../assets/fonts/OpenSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/fonts/OpenSans-BoldItalic.woff2') format('woff2'),
+        url('../../assets/fonts/OpenSans-BoldItalic.ttf') format('truetype'),
+        url('../../assets/fonts/OpenSans-BoldItalic.svg#OpenSans-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src: url('../../assets/fonts/OpenSans-Bold.eot');
+    src: url('../../assets/fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/fonts/OpenSans-Bold.woff2') format('woff2'),
+        url('../../assets/fonts/OpenSans-Bold.ttf') format('truetype'),
+        url('../../assets/fonts/OpenSans-Bold.svg#OpenSans-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans-LightItalic';
+    src: url('../../assets/fonts/OpenSansLight-Italic.eot');
+    src: url('../../assets/fonts/OpenSansLight-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../../assets/fonts/OpenSansLight-Italic.woff2') format('woff2'),
+        url('../../assets/fonts/OpenSansLight-Italic.ttf') format('truetype'),
+        url('../../assets/fonts/OpenSansLight-Italic.svg#OpenSansLight-Italic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+

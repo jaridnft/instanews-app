@@ -1,0 +1,32 @@
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin phablet {
+  @media (min-width: $phablet-width) {
+    @content;
+  }
+}
+
+@mixin header-screen-reader() {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: fixed;
+  width: 1px;
+}
+
+@mixin transition() {
+  transition: all 1s ease-out 0.3s;
+}
