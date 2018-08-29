@@ -11,7 +11,7 @@ var gulp = require('gulp'),
 
 gulp.task("sass", () => {
   return gulp
-    .src("./sass/style.scss")
+    .src("./src/sass/style.scss")
     .pipe(prettyError())
     .pipe(sass())
     .pipe(
@@ -27,7 +27,7 @@ gulp.task("sass", () => {
 
 gulp.task("lint", () => {
     return gulp
-            .src('js/*.js')
+            .src('src/js/*.js')
                 // eslint() attaches the lint output to the "eslint" property
                 // of the file object so it can be used by other modules.
             .pipe(eslint())
@@ -41,7 +41,7 @@ gulp.task("lint", () => {
 
 gulp.task('scripts', gulp.series("lint", () => {
     return gulp
-      .src("./js/*.js") // these are the files gulp will consume
+      .src("./src/js/*.js") // these are the files gulp will consume
       .pipe( babel())   // transcompile ES6 to ES5
       .pipe( uglify() ) // call uglify function on these files
       .pipe( rename ({
@@ -53,8 +53,8 @@ gulp.task('scripts', gulp.series("lint", () => {
 
 gulp.task("watch", () => {
     // pass in files that need to be uglified
-    gulp.watch("js/*.js", gulp.series("scripts"));
-    gulp.watch("sass/**/*.scss",gulp.series("sass"));
+    gulp.watch("src/js/*.js", gulp.series("scripts"));
+    gulp.watch("src/sass/**/*.scss",gulp.series("sass"));
 });
 
 gulp.task("browser-sync", () => {
