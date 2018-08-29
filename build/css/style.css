@@ -429,6 +429,43 @@ header {
           -ms-flex-pack: start;
               justify-content: flex-start; } }
 
+header.toggle {
+  height: 38vh; }
+  @media (min-width: 480px) {
+    header.toggle {
+      height: 33vh; } }
+  @media (min-width: 600px) {
+    header.toggle {
+      height: 15vh;
+      width: 600px; } }
+  @media (min-width: 1000px) {
+    header.toggle {
+      height: 15vh;
+      width: 600px; } }
+  header.toggle .nyt-logo {
+    width: 40%;
+    height: 40%;
+    max-width: 10em;
+    max-height: 10em; }
+    @media (min-width: 480px) {
+      header.toggle .nyt-logo {
+        max-width: 150px;
+        width: 150px;
+        height: 150px; } }
+    @media (min-width: 600px) {
+      header.toggle .nyt-logo {
+        max-height: 67px;
+        max-width: 67px;
+        width: 67px;
+        height: 67px; } }
+    @media (min-width: 1000px) {
+      header.toggle .nyt-logo {
+        margin-left: 0;
+        height: 67px;
+        max-height: 67px;
+        width: 67px;
+        max-width: 67px; } }
+
 select {
   color: black;
   background-color: white;
@@ -466,8 +503,10 @@ select {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; } }
   .stories .story-cell {
-    width: 100%;
+    color: white;
+    display: block;
     height: 420px;
+    width: 100%;
     background-size: cover;
     background-position: 50% 50%;
     position: relative; }
@@ -481,8 +520,7 @@ select {
       width: 100%;
       position: absolute;
       bottom: 0;
-      margin-top: 0;
-      margin-bottom: 0;
+      margin: 0 auto;
       padding: 0.5em 0.6em 0.6em 0.5em;
       line-height: 1.4em;
       background-color: rgba(0, 0, 0, 0.7); }
