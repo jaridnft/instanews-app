@@ -353,25 +353,18 @@ body {
   background-color: black; }
 
 .loader {
-  height: 50vh;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  height: auto;
+  width: 100px;
+  display: block;
+  margin: 15vh auto; }
   @media (min-width: 600px) {
     .loader {
-      height: 65vh; } }
+      margin: 25vh auto;
+      width: 125px; } }
   @media (min-width: 1000px) {
     .loader {
-      height: 75vh; } }
-  .loader img {
-    width: 1%; }
+      margin: 35vh auto;
+      width: 150px; } }
 
 header {
   display: -webkit-box;
@@ -531,3 +524,5 @@ footer {
   font-weight: 500;
   width: 100%;
   color: #888888; }
+  footer .instanews {
+    text-transform: uppercase; }
