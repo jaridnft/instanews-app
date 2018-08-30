@@ -40,7 +40,7 @@ Download or clone repo, then run the following commands in terminal:
 
 **Install Gulp:**
 
-`> npm install gulp`
+`> npm install`
 
 **Convert Sass files to CSS:**
 
