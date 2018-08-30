@@ -12,9 +12,10 @@
  
  ## Technology
  
- * JavaScript / jQuery
- * NPM / Gulp 
- * Sass / CSS
+ * JavaScript/jQuery
+ * NPM/Gulp 
+ * Sass/CSS
+ * HTML
  
  ## Code Sample
  
@@ -30,13 +31,29 @@
      .children(":last-child")
      .css("background-image",`url("${data.results[key].multimedia[4].url}")`);
 ```
-## Installation:
+## Setup
 Download or clone repo, then run the following commands in terminal:
 
-`npm install` - to install gulp
+**Initialize NPM:**
 
-`gulp sass` - to convert Sass files to CSS
+`> npm init` 
 
-`gulp scripts` - to call babel and uglify on JS files
+**Install Gulp:**
 
-`gulp browser-sync` - to refresh page and watch the build folder
+`> npm install`
+
+**Convert Sass files to CSS:**
+
+`> gulp sass`
+
+**Call Babel & Uglify on JS files:**
+
+`> gulp scripts`
+
+**Launch Browser-Sync to automatically update changes**
+
+`> gulp browser-sync`
+
+**Watch changes to Sass/JS and automatically run scripts/sass:**
+
+`> gulp watch`  or  `gulp`
