@@ -14,8 +14,8 @@
  
  * JavaScript ES6 / jQuery
  * NPM / Gulp 
- * Sass / CSS
- * HTML
+ * Sass / CSS3
+ * HTML5
  
  ## Code Sample
  
