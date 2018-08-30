@@ -12,9 +12,9 @@
  
  ## Technology
  
- * JavaScript/jQuery
- * NPM/Gulp 
- * Sass/CSS
+ * JavaScript ES6 / jQuery
+ * NPM / Gulp 
+ * Sass / CSS
  * HTML
  
  ## Code Sample
