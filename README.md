@@ -8,7 +8,7 @@
  
  ## Motivation
  
- This project was used to practice using jQuery and `ajax()` to fetch JSON data and format it according to the design of the webpage. 
+ This project was used to practice ES6 and jQuery's `ajax()` to fetch JSON data and format it according to the design of the webpage. 
  
  ## Technology
  
@@ -50,7 +50,7 @@ Download or clone repo, then run the following commands in terminal:
 
 `> gulp scripts`
 
-**Launch Browser-Sync to automatically update changes**
+**Launch Browser-Sync to automatically update changes:**
 
 `> gulp browser-sync`
 
