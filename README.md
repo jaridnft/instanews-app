@@ -57,3 +57,7 @@ Download or clone repo, then run the following commands in terminal:
 **Watch changes to Sass/JS and automatically run scripts/sass:**
 
 `> gulp watch`  or  `gulp`
+
+## @TODO
+
+* change layout to CSS grid from flexbox
