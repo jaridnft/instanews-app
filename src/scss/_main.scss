@@ -74,6 +74,7 @@ header {
 
 header.toggle {
   height: 38vh;
+  @include transition();
   @include phablet {
     height: 33vh;
   }
@@ -90,6 +91,7 @@ header.toggle {
     height: 40%;
     max-width: 10em;
     max-height: 10em;
+    @include transition();
     @include phablet {
       max-width: 150px;
       width: 150px;
@@ -125,9 +127,7 @@ select {
 }
 
 .select-container {
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-bottom: 2em;
+  margin: 0 1em 2em 1em;
 }
 
 .stories {
