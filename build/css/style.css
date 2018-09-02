@@ -347,7 +347,7 @@ template {
   min-width: 128px; }
 
 body {
-  font-family: "OpenSans-Light", serif;
+  font-family: 'OpenSans-Light', serif;
   font-size: 16px;
   color: #ffffff;
   background-color: black; }
@@ -385,8 +385,22 @@ header {
   height: 90vh;
   -webkit-transition: all 1s ease-out 0.3s;
   transition: all 1s ease-out 0.3s; }
+  @media (min-width: 600px) {
+    header {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
+  @media (min-width: 1000px) {
+    header {
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; } }
   header .nyt-logo {
     width: 70%;
+    height: 70%;
     max-width: 14em;
     max-height: 14em;
     -webkit-transition: all 1s ease-out 0.3s;
@@ -408,22 +422,11 @@ header {
         margin-left: 2em;
         width: 220px;
         height: 220px; } }
-  @media (min-width: 600px) {
-    header {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; } }
-  @media (min-width: 1000px) {
-    header {
-      -webkit-box-pack: start;
-          -ms-flex-pack: start;
-              justify-content: flex-start; } }
 
 header.toggle {
-  height: 38vh; }
+  height: 38vh;
+  -webkit-transition: all 1s ease-out 0.3s;
+  transition: all 1s ease-out 0.3s; }
   @media (min-width: 480px) {
     header.toggle {
       height: 33vh; } }
@@ -439,7 +442,9 @@ header.toggle {
     width: 40%;
     height: 40%;
     max-width: 10em;
-    max-height: 10em; }
+    max-height: 10em;
+    -webkit-transition: all 1s ease-out 0.3s;
+    transition: all 1s ease-out 0.3s; }
     @media (min-width: 480px) {
       header.toggle .nyt-logo {
         max-width: 150px;
@@ -472,9 +477,7 @@ select {
       width: 12em; } }
 
 .select-container {
-  margin-left: 1em;
-  margin-right: 1em;
-  margin-bottom: 2em; }
+  margin: 0 1em 2em 1em; }
 
 .stories {
   display: -webkit-box;

@@ -11,7 +11,7 @@ var gulp = require('gulp'),
 
 gulp.task('sass', () => {
   return gulp
-    .src('./src/sass/style.scss')
+    .src('./src/scss/style.scss')
     .pipe(prettyError())
     .pipe(sass())
     .pipe(

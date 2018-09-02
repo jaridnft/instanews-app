@@ -40,8 +40,16 @@ header {
   justify-content: center;
   height: 90vh;
   @include transition();
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  @include desktop {
+    justify-content: flex-start;
+  }
   .nyt-logo {
     width: 70%;
+    height: 70%;
     max-width: 14em;
     max-height: 14em;
     @include transition();
@@ -62,13 +70,6 @@ header {
       width: 220px;
       height: 220px;
     }
-  }
-  @include tablet {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  @include desktop {
-    justify-content: flex-start;
   }
 }
 
