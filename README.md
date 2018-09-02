@@ -4,13 +4,9 @@
 
 'Top Stories' application leveraging the [New York Times API](https://developer.nytimes.com/top_stories_v2.json) to dynamically generate the day's top news. Fully responsive design that reconfigures when a story-type is selected.
 
-### Desktop View Demo
+### Desktop & Mobile View Demo
 
-![alt text](./assets/images/demo.gif 'Instanews')
-
-### Mobile View Demo
-
-![alt text](./assets/images/mobile-demo.gif 'Instanews Mobile')
+<img src="./assets/images/demo.gif" width="564.5"><img src="./assets/images/mobile-demo.gif" width="289.25">
 
 ## Motivation
 
