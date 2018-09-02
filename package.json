@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/jaridwarren/instanews-app.git"
   },
-  "author": "Jarid Warren",
+  "author": "Jarid Warren <jaridwarren@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jaridwarren/instanews-app/issues"
