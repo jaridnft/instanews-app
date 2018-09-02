@@ -46,7 +46,7 @@ gulp.task(
   gulp.series('lint', () => {
     return gulp
       .src('./src/js/*.js') // these are the files gulp will consume
-      .pipe(babel()) // transcompile ES6 to ES5
+      .pipe(babel({ presets: ['es2015'] })) // transcompile ES6 to ES5
       .pipe(uglify()) // call uglify function on these files
       .pipe(
         rename({
