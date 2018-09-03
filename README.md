@@ -15,7 +15,7 @@ This project was used to practice ES6 and jQuery's `ajax()` to fetch JSON data a
 ## Technology
 
 - <img src="./assets/images/readme-images/js.svg" width="15"> JavaScript ES6 / <img src="./assets/images/readme-images/jquery.svg" width="40"> jQuery
-- <img src="./assets/images/readme-images/npm.svg" width="20"> NPM / <img src="./assets/images/readme-images/gulp.svg" width="10"> Gulp
+- <img src="./assets/images/readme-images/npm.svg" width="20"> NPM / <img src="./assets/images/readme-images/gulp.svg" width="10"> Gulp / <img src="./assets/images/readme-images/babel.svg" width="30"> Babel
 - <img src="./assets/images/readme-images/sass.svg" width="20"> Sass / <img src="./assets/images/readme-images/css3.svg" width="12"> CSS3
 - <img src="./assets/images/readme-images/html5.svg" width="12"> HTML5
 
